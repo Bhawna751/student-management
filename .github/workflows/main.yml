@@ -55,15 +55,15 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # 7. Build and Push Docker Image
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/springboot-demo:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/springboot-demo:${{ github.sha }}
+      # # 7. Build and Push Docker Image
+      # - name: Build and Push Docker Image
+      #   uses: docker/build-push-action@v6
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: |
+      #       ${{ secrets.DOCKERHUB_USERNAME }}/springboot-demo:latest
+      #       ${{ secrets.DOCKERHUB_USERNAME }}/springboot-demo:${{ github.sha }}
 
       # # 8. Deploy application on Ubuntu Server
       # - name: Deploy Spring Boot Application
